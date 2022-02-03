@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <search-bar @search="getMovies"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import axios from 'axios'
+import SearchBar from './components/searchBar.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SearchBar
+  },
+  data() {
+    return {
+      movies: [],
+    }
+  },
+  methods: {
+    getMovies(textInput) {
+      axios.get(`https://api.themoviedb.org/3/search/movie?query=${textInput}&api_key=e99307154c6dfb0b4750f6603256716d`).then((response) => {
+        this.movies = response.data.results;
+      })
+
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
