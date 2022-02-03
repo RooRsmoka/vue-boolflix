@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/mainContainer.scss';
+@import '@/style/mainBox.scss';
 </style>

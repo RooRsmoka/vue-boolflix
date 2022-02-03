@@ -23,5 +23,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/searchBar.scss';
+@import '@/style/headBar.scss';
 </style>

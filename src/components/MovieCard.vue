@@ -22,5 +22,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/contentCard.scss';
+@import '@/style/movieCard.scss';
 </style>
