@@ -1,0 +1,43 @@
+.content-card {
+    position: relative;
+    width: calc(25% - 20px);
+    margin: 10px;
+    padding: 10px;
+    background-color: #000;
+    cursor: pointer;
+
+    &:hover .content-info {
+        display: block;
+    }
+
+    .content-poster {
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content-info {
+        display: none;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            margin: 5px;
+            color: #fff;
+        }
+
+        img {
+            width: 10%;
+            height: 10%;
+        }
+    }
+}
